@@ -1,14 +1,17 @@
 new Vue({
     el:"#app",
     data:{
-      title:"Google",
-      isItTrue:true,
-      cars:['Ford','Corolla','Toyata'],
-      robots:{
-        name:'Franky'
-      },
-      greeting(){
-        return "Hello World";
+      return:{
+        basemultiplier: 5,
+        baseValue: 2
       }
-    }
+    },
+    methods:{
+      add(a,b,c){
+        return a+b+c;
+      },
+      multiply(num){
+        return num * this.basemultiplier;
+      },
+    },
 });

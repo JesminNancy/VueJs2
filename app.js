@@ -1,17 +1,9 @@
 new Vue({
     el:"#app",
     data:{
-      return:{
-        basemultiplier: 5,
-        baseValue: 2
-      }
-    },
-    methods:{
-      add(a,b,c){
-        return a+b+c;
-      },
-      multiply(num){
-        return num * this.basemultiplier;
-      },
-    },
+        src:"https://picsum.photos/200",
+        alt:"this is natural background",
+        link:"https://www.youtube.com/"
+    }
+   
 });

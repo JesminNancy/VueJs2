@@ -9,12 +9,9 @@
   </head>
   <body>
     <div id="app">
-      <img v-bind:src="src" v-bind:alt="alt" />
-      <hr />
-      <a v-bind:href="link">Youtube</a>
-      <hr />
-      <p v-text="myText"></p>
-      <p v-html="myHtml"></p>
+      <!-- <p v-if="userAge >= allowedAge">You are good to go</p> -->
+      <p v-if="changeUser()">You are good to go</p>
+      <p v-else>you are not good to go</p>
     </div>
 
     <script src="app.js"></script>

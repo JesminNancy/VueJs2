@@ -1,6 +1,13 @@
 new Vue({
     el:"#app",
     data:{
-      cars:['Ford','Toyata','Corolla','BWM']
+      name:'Radifa',
+  },
+  methods: {
+    update() {
+      setTimeout(() => {
+        return this.name = 'Jesmin';
+      },2000)
+      },
     }
 });

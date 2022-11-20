@@ -9,9 +9,9 @@
   </head>
   <body>
     <div id="app">
-      <p v-for="car in cars">{{ car }}</p>
-      <hr />
-      <p v-for="n in 10">{{ n }}</p>
+      <h1>{{ name }}</h1>
+      <h1 v-once>{{ name }}</h1>
+      {{ update() }}
     </div>
 
     <script src="app.js"></script>

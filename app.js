@@ -1,19 +1,13 @@
-const app = new Vue({
-    el:"#app",
-    data:{
-      value:'1st'
-  },
-  methods: {
-    changeValue() {
-      app1.value = 'Updated';
-    }, 
-    }
-});
-
+const temp = '<p>The country is {{ name }}</p>';
 const app1 = new Vue({
-    el:"#app1",
     data:{
-     value:'2nd'
-
-  }
+      name:'America'
+  },
+  template: temp
+ 
 });
+
+setTimeout(() => {
+  app1.$mount('#app');
+}, 2000);
+

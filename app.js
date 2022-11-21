@@ -1,9 +1,11 @@
 new Vue({
     el:"#app",
     data:{
-      name: 'Radifa',
-      x: 0,
-      y: 0
+      formData: {
+        firstName: '',
+        lastName:''
+      }
+
   },
   methods: {
     update(name) {
@@ -14,7 +16,7 @@ new Vue({
       this.y = event.clientY;
     },
     handleForm() {
-      console.log('Form submit');
+      console.log(this.formData);
     },
     }
 });

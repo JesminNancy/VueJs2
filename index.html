@@ -10,11 +10,13 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ name }}</h1>
-      <button v-on:click.right="update('Ripon')">click me</button>
-      <hr />
       <form v-on:submit.prevent="handleForm">
-        <input type="text" />
+        <label>FirstName</label>
+        <input type="text" v-model="formData.firstName" />
+        <hr />
+        <label>LastName</label>
+        <input type="text" v-model="formData.lastName" />
+        <hr />
         <button type="submit">submit</button>
       </form>
     </div>

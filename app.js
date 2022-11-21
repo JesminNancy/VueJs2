@@ -1,13 +1,17 @@
 new Vue({
     el:"#app",
     data:{
-      name:'Radifa',
+      name: 'Radifa',
+      x: 0,
+      y: 0
   },
   methods: {
     update() {
-      setTimeout(() => {
-        return this.name = 'Jesmin';
-      },2000)
-      },
+           return this.name = 'Nancy';
+    },
+    getCoord(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+    },
     }
 });

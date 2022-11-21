@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Js 2</title>
+    <link rel="stylesheet" href="custom.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
   </head>
   <body>
     <div id="app">
       <h1>{{ name }}</h1>
-      <h1 v-once>{{ name }}</h1>
-      {{ update() }}
+      <button v-on:click="update">click me</button>
+      <hr />
+      <div v-on:mousemove="getCoord" class="box">hover me</div>
+      <p>X: {{ x }}</p>
+      <p>Y: {{ y }}</p>
     </div>
 
     <script src="app.js"></script>

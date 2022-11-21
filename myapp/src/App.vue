@@ -1,6 +1,6 @@
 <template>
   <div>
-    <compHeader />
+    <app-header />
     <compFooter />
     <p>{{ name }}</p>
     <p>{{ age }}</p>
@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import compHeader from "./Components/TheHeader.vue";
 import compFooter from "./Components/TheFooter.vue";
 export default {
   data() {
@@ -18,7 +17,6 @@ export default {
     };
   },
   components: {
-    compHeader,
     compFooter,
   },
 };

@@ -1,22 +1,22 @@
 new Vue({
     el:"#app",
     data:{
-      formData: {
-        firstName: '',
-        lastName:''
-      }
+      a: 0,
+      b:0,
+      salary:10
 
   },
   methods: {
-    update(name) {
-        this.name = name;
+
+  },
+  computed: {
+    addToA() {
+        console.log("add A");
+       return this.a + this.salary; 
     },
-    getCoord(event) {
-      this.x = event.clientX;
-      this.y = event.clientY;
+    addToB() {
+      console.log("add B");
+     return this.b + this.salary; 
     },
-    handleForm() {
-      console.log(this.formData);
-    },
-    }
+  }
 });

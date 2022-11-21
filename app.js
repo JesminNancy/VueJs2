@@ -6,12 +6,15 @@ new Vue({
       y: 0
   },
   methods: {
-    update() {
-           return this.name = 'Nancy';
+    update(name) {
+        this.name = name;
     },
     getCoord(event) {
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    handleForm() {
+      console.log('Form submit');
     },
     }
 });

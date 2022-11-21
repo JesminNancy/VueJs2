@@ -1,13 +1,14 @@
-const temp = '<p>The country is {{ name }}</p>';
-const app1 = new Vue({
-    data:{
-      name:'America'
+Vue.component('abc', {
+  data() {
+    return {
+      name:'Radifa'
+    }
   },
-  template: temp
- 
+  template:`<p>{{name}}</p>`
+})
+
+new Vue({
+  el:'#app',
 });
 
-setTimeout(() => {
-  app1.$mount('#app');
-}, 2000);
 

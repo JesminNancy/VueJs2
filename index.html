@@ -10,7 +10,9 @@
   </head>
   <body>
     <div id="app">
-      <abc></abc>
+      <h1>{{ name }}</h1>
+      <button @click="updateName">Update</button>
+      <button @click="killInstance">Destroy</button>
     </div>
 
     <script src="app.js"></script>

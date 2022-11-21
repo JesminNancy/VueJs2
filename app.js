@@ -1,14 +1,40 @@
-Vue.component('abc', {
-  data() {
-    return {
-      name:'Radifa'
+new Vue({
+  el: '#app',
+  data: {
+    name:'Google',
+  },
+  methods: {
+    updateName() {
+      this.name = 'Facebook';
+    },
+    killInstance() {
+      this.$destroy();
     }
   },
-  template:`<p>{{name}}</p>`
-})
-
-new Vue({
-  el:'#app',
+  beforeCreate() {
+    console.log('before create');
+  },
+  created() {
+    console.log('created');
+  },
+    beforeMount() {
+    console.log('before mounted');
+  },
+   mounted() {
+    console.log('mounted');
+  },
+  beforeUpdate() {
+    console.log('before updated');
+  },
+  updated() {
+    console.log('updated');
+  },
+  beforeDestroy() {
+    console.log('before destroy');
+  },
+  destroyed() {
+    console.log('destroyed');
+  },
 });
 
 

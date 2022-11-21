@@ -1,22 +1,19 @@
-new Vue({
+const app = new Vue({
     el:"#app",
     data:{
-      a: 0,
-      b:0,
-      salary:10
-
+      value:'1st'
   },
   methods: {
+    changeValue() {
+      app1.value = 'Updated';
+    }, 
+    }
+});
 
-  },
-  computed: {
-    addToA() {
-        console.log("add A");
-       return this.a + this.salary; 
-    },
-    addToB() {
-      console.log("add B");
-     return this.b + this.salary; 
-    },
+const app1 = new Vue({
+    el:"#app1",
+    data:{
+     value:'2nd'
+
   }
 });

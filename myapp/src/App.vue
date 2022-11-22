@@ -1,22 +1,21 @@
 <template>
   <div>
-    <app-header />
+    <compHeader :myStudents="students" />
     <compFooter />
-    <p>{{ name }}</p>
-    <p>{{ age }}</p>
   </div>
 </template>
 
 <script>
+import compHeader from "./Components/TheHeader.vue";
 import compFooter from "./Components/TheFooter.vue";
 export default {
   data() {
     return {
-      name: "Radifa",
-      age: 8,
+      students: ["Radifa", "Debi", "Esha", "Samiya"],
     };
   },
   components: {
+    compHeader,
     compFooter,
   },
 };

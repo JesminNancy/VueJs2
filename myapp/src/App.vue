@@ -1,6 +1,11 @@
 <template>
   <div>
-    <compHeader :myStudents="students" />
+    <compHeader
+      :firstName="fName"
+      :lastName="lName"
+      :age="myAge"
+      @updateValue="fName = $event"
+    />
     <compFooter />
   </div>
 </template>
@@ -11,7 +16,9 @@ import compFooter from "./Components/TheFooter.vue";
 export default {
   data() {
     return {
-      students: ["Radifa", "Debi", "Esha", "Samiya"],
+      fName: "Jhony",
+      lName: "Doe",
+      myAge: 35,
     };
   },
   components: {

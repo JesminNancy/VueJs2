@@ -1,12 +1,7 @@
 <template>
   <div>
-    <compHeader
-      :firstName="fName"
-      :lastName="lName"
-      :age="myAge"
-      @updateValue="fName = $event"
-    />
-    <compFooter />
+    <compHeader :firstName="fName" />
+    <compFooter :lastName="lName" />
   </div>
 </template>
 
@@ -18,7 +13,6 @@ export default {
     return {
       fName: "Jhony",
       lName: "Doe",
-      myAge: 35,
     };
   },
   components: {

@@ -1,14 +1,6 @@
 <template>
   <div>
-    <compListHelper>
-      <ul slot="listItem">
-        <li v-for="li in list" :key="li">
-          {{ li }}
-        </li>
-      </ul>
-      <p slot="para">This is paragrap</p>
-      <p :slot="loader">See You Again</p>
-    </compListHelper>
+    <compListHelper> </compListHelper>
   </div>
 </template>
 

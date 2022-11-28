@@ -29,6 +29,11 @@ Vue.directive('something', {
     }
   }
 })
+
+Vue.filter('removeText', (value) => {
+  return value.slice(2);
+})
+
 export const bus = new Vue();
 
 new Vue({

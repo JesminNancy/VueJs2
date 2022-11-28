@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <transition name="appear">
+    <transition
+      name="appear"
+      enter-active-class="animate__animated animate__slideInLeft"
+      leave-active-class="animate__animated animate__slideInRight"
+    >
       <div class="p-3 mb-3 bg-success text-white" v-if="display">Hello</div>
     </transition>
 
@@ -16,17 +20,5 @@ export default {
   },
 };
 </script>
-<style>
-.appear-enter {
-  opacity: 0;
-}
-.appear-enter-active {
-  transition: opacity 3s;
-}
-.appear-leave {
-}
-.appear-leave-active {
-  opacity: 0;
-  transition: opacity 3s;
-}
-</style>
+
+<style></style>

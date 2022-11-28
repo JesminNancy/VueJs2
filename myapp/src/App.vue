@@ -8,16 +8,32 @@
           <h1>From Handeling</h1>
           <hr />
           <div class="form-group">
-            <label for="email">Mail</label>
-            <input type="text" id="email" class="form-control" />
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              v-model="userData.email"
+            />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" class="form-control" />
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              v-model.lazy="userData.password"
+            />
+            <p>{{ userData.password }}</p>
           </div>
           <div class="form-group">
             <label for="age">Age</label>
-            <input type="number" id="age" class="form-control" />
+            <input
+              type="number"
+              id="age"
+              class="form-control"
+              v-model="userData.age"
+            />
           </div>
         </div>
       </div>
@@ -27,7 +43,13 @@
         >
           <label for="message">Message</label><br />
 
-          <textarea id="message" rows="5" class="form-control"> </textarea>
+          <textarea
+            id="message"
+            rows="5"
+            class="form-control"
+            v-model="message"
+          >
+          </textarea>
         </div>
       </div>
       <div class="row">
@@ -84,10 +106,10 @@
             <h4>Your Data</h4>
           </div>
           <div class="panel-body">
-            <p>Mail:</p>
-            <p>Password:</p>
-            <p>Age:</p>
-            <p>Message:</p>
+            <p>E-mail: {{ userData.email }}</p>
+            <p>Password: {{ userData.password }}</p>
+            <p>Age: {{ userData.age }}</p>
+            <p>Message: {{ message }}</p>
             <p><strong>Send Mail?</strong></p>
             <ul>
               <li></li>
@@ -103,7 +125,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      userData: {
+        email: "",
+        password: "",
+        age: 0,
+      },
+      message: "",
+    };
+  },
+};
 </script>
 
 <style>

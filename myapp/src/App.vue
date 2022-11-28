@@ -58,10 +58,21 @@
         >
           <div class="form-group">
             <label for="sendmail">
-              <input type="checkbox" id="sendmail" value="SendMail" /> Send Mail
+              <input
+                type="checkbox"
+                id="sendmail"
+                value="SendMail"
+                v-model="sendmail"
+              />
+              Send Mail
             </label>
             <label for="sendInfomail">
-              <input type="checkbox" id="sendInfomail" value="SendInfoMail" />
+              <input
+                type="checkbox"
+                id="sendInfomail"
+                value="SendInfoMail"
+                v-model="sendmail"
+              />
               Send Infomail
             </label>
           </div>
@@ -72,10 +83,11 @@
           class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group"
         >
           <label for="male">
-            <input type="radio" id="male" value="Male" /> Male
+            <input type="radio" id="male" value="Male" v-model="gender" /> Male
           </label>
           <label for="female">
-            <input type="radio" id="female" value="Female" /> Female
+            <input type="radio" id="female" value="Female" v-model="gender" />
+            Female
           </label>
         </div>
       </div>
@@ -109,12 +121,17 @@
             <p>E-mail: {{ userData.email }}</p>
             <p>Password: {{ userData.password }}</p>
             <p>Age: {{ userData.age }}</p>
-            <p>Message: {{ message }}</p>
-            <p><strong>Send Mail?</strong></p>
-            <ul>
-              <li></li>
-            </ul>
-            <p>Gender:</p>
+            <p style="white-space: pre-line">Message: {{ message }}</p>
+            <p>
+              <strong>Send Mail: {{ sendmail }}</strong>
+            </p>
+
+            <!-- <ul>
+              <li v-for="mail in sendmail" :key="mail">
+                {{ mail }}
+              </li>
+            </ul> -->
+            <p>Gender: {{ gender }}</p>
             <p>Priority:</p>
             <p>Switched:</p>
           </div>
@@ -134,6 +151,8 @@ export default {
         age: 0,
       },
       message: "",
+      sendmail: [],
+      gender: "",
     };
   },
 };

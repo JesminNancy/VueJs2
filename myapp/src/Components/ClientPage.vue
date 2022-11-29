@@ -10,12 +10,13 @@
 </template>
 <script>
 import { carMixins } from "./mixin";
+import { textMixins } from "./mixin";
 export default {
   data() {
     return {
-      text: "Hello World",
+      // text: "Hello World",
     };
   },
-  mixins: [carMixins],
+  mixins: [carMixins, textMixins],
 };
 </script>

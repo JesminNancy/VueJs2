@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <p>{{ text | upperCase | removeText }}</p>
+    <ClientPage></ClientPage>
+    <UserPage></UserPage>
   </div>
 </template>
 <script>
+import ClientPage from "./Components/ClientPage.vue";
+import UserPage from "./Components/UserPage.vue";
 export default {
   data() {
-    return {
-      text: "Hello world",
-    };
+    return {};
   },
-  filters: {
-    upperCase(value) {
-      return value.toUpperCase();
-    },
+  components: {
+    ClientPage,
+    UserPage,
   },
 };
 </script>

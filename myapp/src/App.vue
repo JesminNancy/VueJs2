@@ -1,19 +1,16 @@
 <template>
   <div class="container">
-    <ClientPage></ClientPage>
-    <UserPage></UserPage>
+    <ContactPage></ContactPage>
   </div>
 </template>
 <script>
-import ClientPage from "./Components/ClientPage.vue";
-import UserPage from "./Components/UserPage.vue";
+import ContactPage from "./Components/TheContact.vue";
 export default {
   data() {
     return {};
   },
   components: {
-    ClientPage,
-    UserPage,
+    ContactPage,
   },
 };
 </script>

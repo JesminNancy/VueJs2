@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <ContactPage></ContactPage>
+    <BlogPage></BlogPage>
   </div>
 </template>
 <script>
-import ContactPage from "./Components/TheContact.vue";
+import BlogPage from "./Components/BlogPage.vue";
 export default {
   data() {
     return {};
   },
   components: {
-    ContactPage,
+    BlogPage,
   },
 };
 </script>
